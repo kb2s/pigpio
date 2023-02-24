@@ -104,7 +104,7 @@ install:	$(ALL)
 	install -m 0755 pigpiod                        $(DESTDIR)$(bindir)
 	install -m 0755 pigs                           $(DESTDIR)$(bindir)
 	if which python2; then python2 setup.py install $(PYINSTALLARGS); fi
-	if which python3; then python3 -m pip install $(PYINSTALLARGS); fi
+	if which python3; then python3 -m pip install pigpio; fi
 	install -m 0755 -d                             $(DESTDIR)$(mandir)/man1
 	install -m 0644 p*.1                           $(DESTDIR)$(mandir)/man1
 	install -m 0755 -d                             $(DESTDIR)$(mandir)/man3
