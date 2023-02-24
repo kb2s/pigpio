@@ -110,7 +110,7 @@ install:	$(ALL)
 	install -m 0755 -d                             $(DESTDIR)$(mandir)/man3
 	install -m 0644 p*.3                           $(DESTDIR)$(mandir)/man3
 ifeq ($(DESTDIR),)
-	ldconfig
+	ldconfig /etc/ld.so.conf.d
 endif
 
 uninstall:
